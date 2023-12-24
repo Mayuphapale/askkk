@@ -7,7 +7,7 @@
         width: 300px; /* Set the desired width of your image */
       height: 600px; /* Set the desired width of your image */
       position: relative;
-      margin-left: 850px;
+      margin-left: 870px;
       transition: transform 5s ease-in-out;
       animation: moveAnimation 20s ease-in-out ;
     }
@@ -57,9 +57,12 @@
         transition-delay: 5s;
     }
     .moving-image1{
-        margin-left: 950px;
+        margin-left: 970px;
         margin-top: -1100px;
         transition: 0.5s;
+    }
+    .moving-image11{
+      margin-left: 20px;
     }
     .zoom-text{
         margin-left: 1030px;
@@ -73,7 +76,7 @@
     }
 
     .moving-image.move-left {
-      transform: translateX(-1046px); /* Move the image 100px to the left */
+      transform: translateX(-1065px); /* Move the image 100px to the left */
     }
 
     .hidden {
@@ -105,9 +108,9 @@
     <div>
         <button onclick="startAnimation()" class="btn1">Click to complete the heart &#128525;</button>
     </div>
-  <img  src="hand1.png" class="moving-image11" alt="First Image" width="300px" height="600px">
-  <img id="firstImage" src="hand2.png" class="moving-image" alt="First Image">
-  <img id="secondImage" src="ilove.gif" class="moving-image1 hidden" alt="Second Image">
+  <img  src="images/hand1.png" class="moving-image11" alt="First Image" width="300px" height="600px">
+  <img id="firstImage" src="images/hand2.png" class="moving-image" alt="First Image">
+  <img id="secondImage" src="images/ilove.gif" class="moving-image1 hidden" alt="Second Image">
   <h6  id="firstText"  class="zoom-text hidden">I LOVE YOOO...&#128536;</h6>
   <button class="btn " id = "myButton" onclick="nextPage()">Final -></button>
   
