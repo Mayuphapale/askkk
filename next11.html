@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moving Image Right to Left</title>
+  <style>
+    .moving-image {
+      width: 300px; /* Set the desired width of your image */
+      height: 600px;
+      margin-left: 850px;
+      transition: transform 5s ease-in-out;
+      animation: moveAnimation 20s ease-in-out ;
+    }
+   
+    body {
+    
+    background-color: #fddad7;
+}
+    .moving-image1{
+        margin-left: 20px;
+    }
+    .btn1{
+        margin-left: 600px;
+        margin-top: 30px;
+        padding: 13px;
+        font-size: 20px;
+        font-family: cursive;
+        border-radius: 20px;
+        background-color: #ea6985;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+    }
+    .btn1:hover{
+        background-color: white;
+        color: #ea6985;
+        border: 1px solid #ea6985;
+        transition: 0.4s;
+    }
+
+    
+    
+
+   .move-left {
+      transform: translateX(-1053px); /* Move the image 100px to the left */
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="btn">
+        <button onclick="moveImageLeft()" class="btn1" >Click it to complete a Heart  </button>
+    </div>
+    <img src="hand1.png"  width="320px" height="600px" class="moving-image1">
+  <img src="hand2.png" id="myImage" class="moving-image" alt="Moving Image">
+  
+</body>
+<script>
+   function moveImageLeft() {
+      var image = document.getElementById('myImage');
+      image.classList.toggle('move-left'); // Toggle the 'move-left' class
+    }
+</script>
+
+</html>

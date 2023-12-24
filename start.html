@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:rgb(253, 235, 205);
+    }
+    .blinking-text {
+        font-size: 20px;
+        font-family: cursive;
+        color: rgb(26, 26, 28);
+        margin-left: 250px;
+        text-shadow: 2px 2px 4px rgba(150, 147, 147, 0.5);
+        animation: blinkAnimation 1s ease-in-out infinite; /* Animation lasting 1 second */
+    }
+
+    @keyframes blinkAnimation {
+      0% {
+        opacity: 1; /* Visible */
+      }
+      50% {
+        opacity: 0; /* Hidden */
+      }
+      100% {
+        opacity: 1; /* Visible */
+      }
+    }
+    .img{
+        align-items: end;
+        margin-left: 615px;
+        margin-top: -520px;
+    }
+    h1{
+        font-size: 60px;
+        font-family: cursive;
+        margin-top: 200px;
+        margin-left: 240px;
+    }
+    h3{
+        font-size: 30px;
+        font-family: cursive;
+        color: rgb(255, 255, 255);
+        margin-left: 390px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+    }
+    .text{
+        font-size: 30px;
+        font-family: cursive;
+        color: rgb(255, 255, 255);
+        margin-left: 290px; 
+    }
+    .conatiner{
+        display: flex;
+        margin-right: 10px;
+    }
+    .btn1{
+        margin-left: 450px;
+        font-weight: 900;
+        padding: 15px;
+        width: 100px;
+        font-size: 20px;
+        font-family: cursive;
+        border-radius: 20px;
+        background-color: #ea6985;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+    }
+    .btn1:hover{
+        background-color: white;
+        color: #ea6985;
+        border: 1px solid #ea6985;
+        transition: 0.4s;
+    }
+
+</style>
+<body>
+  <div class="container"> 
+    <h1>Heyyyy , Love !!!! </h1>
+    <h3 >Thank you for 
+    
+    </h3>
+    <h3 class="text"> always being there for me !</h3>
+    <p class="blinking-text">Something is exciting for YOU &#128512; -> Click on Next</p>
+    <button class="btn1" onclick="nextPage()">Next...</button>
+  <img src="heyy.png" class="img" alt="" width="900px" height="670px" >
+  </div>
+</body>
+<script>
+    function nextPage() {
+                        window.location.href = "askinghim.html";
+                    }
+</script>
+</html>

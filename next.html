@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transition Completion Image Change</title>
+  <style>
+    .moving-image {
+        width: 300px; /* Set the desired width of your image */
+      height: 600px; /* Set the desired width of your image */
+      position: relative;
+      margin-left: 850px;
+      transition: transform 5s ease-in-out;
+      animation: moveAnimation 20s ease-in-out ;
+    }
+    body {
+    
+    background-color:  rgb(253, 235, 205);
+    }
+    .btn1{
+        margin-left: 550px;
+        margin-top: 30px;
+        padding: 13px;
+        font-size: 20px;
+        font-family: cursive;
+        border-radius: 20px;
+        background-color: #ea6985;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+    }
+    .btn1:hover{
+        background-color: white;
+        color: #ea6985;
+        border: 1px solid #ea6985;
+        transition: 0.4s;
+    }
+    .btn{
+        margin-left: 1390px;
+        margin-top: 330px;
+        width: 100px;
+        padding: 13px;
+        font-size: 20px;
+        font-family: cursive;
+        border-radius: 20px;
+        background-color: #ea6985;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+        transition-delay: 10s;
+    }
+    .btn:hover{
+        background-color: white;
+        color: #ea6985;
+        border: 1px solid #ea6985;
+        transition: 0.4s;
+        transition-delay: 5s;
+    }
+    .moving-image1{
+        margin-left: 950px;
+        margin-top: -1100px;
+        transition: 0.5s;
+    }
+    .zoom-text{
+        margin-left: 1030px;
+        margin-top: -500px;
+        font-size: 30px;
+        font-family: cursive;
+        transition: 0.3s;
+        color: white;
+        text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .moving-image.move-left {
+      transform: translateX(-1046px); /* Move the image 100px to the left */
+    }
+
+    .hidden {
+      display: none; 
+    }
+
+    .zoom-text {
+      font-size: 24px; /* Set the initial font size */
+      animation: zoomInOut 3s ease-in-out infinite; /* Animation lasting 3 seconds */
+    }
+
+    @keyframes zoomInOut {
+      0%, 100% {
+        transform: scale(1); /* Initial and final size */
+      }
+      50% {
+        transform: scale(1.5); /* Zoomed size */
+      }
+    }
+
+    #myButton {
+      display: none;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div>
+        <button onclick="startAnimation()" class="btn1">Click to complete the heart &#128525;</button>
+    </div>
+  <img  src="hand1.png" class="moving-image11" alt="First Image" width="300px" height="600px">
+  <img id="firstImage" src="hand2.png" class="moving-image" alt="First Image">
+  <img id="secondImage" src="ilove.gif" class="moving-image1 hidden" alt="Second Image">
+  <h6  id="firstText"  class="zoom-text hidden">I LOVE YOOO...&#128536;</h6>
+  <button class="btn " id = "myButton" onclick="nextPage()">Final -></button>
+  
+
+  <script>
+      function nextPage() {
+                        window.location.href = "miss.html";
+                    }
+
+  function showButton() {
+      var button = document.getElementById('myButton');
+      setTimeout(function() {
+        button.style.display = 'block'; 
+      }, 10000); 
+    }
+
+    window.onload = showButton;                
+
+
+    function startAnimation() {
+      var firstImage = document.getElementById('firstImage');
+      var secondImage = document.getElementById('secondImage');
+
+      firstImage.classList.add('move-left'); // Add the 'move-left' class to start the animation
+
+      firstImage.addEventListener('transitionend', function(event) {
+        if (event.propertyName === 'transform') {
+          // Transition completed, display the second image
+          secondImage.classList.remove('hidden');
+          firstText.classList.remove('hidden');
+          yesButton.classList.remove('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
